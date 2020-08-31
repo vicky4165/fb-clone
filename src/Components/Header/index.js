@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";

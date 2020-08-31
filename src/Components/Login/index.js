@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "./Login.css";
 import Logo from "../../Assets/images/logo.webp";
@@ -14,7 +15,6 @@ function Login() {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log("RESULT: ", result);
         dispatch({
           type: actionTypes.SET_USER,
           user: result.user,
@@ -32,7 +32,6 @@ function Login() {
         <img src={Logo} alt="" />
         <img src={LogoText} alt="" />
       </div>
-
       <Button type="submit" onClick={signIn}>
         Sign In
       </Button>

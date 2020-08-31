@@ -10,7 +10,7 @@ function Feed() {
 
   useEffect(() => {
     db.collection("posts")
-      .orderBy("timestamp", "desc")
+      .orderBy("createdAt", "desc")
       .onSnapshot((snapshot) => {
         setPosts(
           snapshot.docs.map((doc) => {
@@ -29,7 +29,7 @@ function Feed() {
           key={post.id}
           image={post.data.image}
           message={post.data.message}
-          timestamp={post.data.timestamp}
+          timestamp={post.data.createdAt}
           username={post.data.username}
           profilePic={post.data.profilePic}
         />
